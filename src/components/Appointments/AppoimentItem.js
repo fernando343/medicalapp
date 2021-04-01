@@ -1,12 +1,27 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native';
 import { Card, Avatar, Icon } from 'react-native-elements';
-//icons
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
+const AppoimentItem = ({ appoiment = {} }) => {
 
+    const {
+        id = 1,
+        picture = "https://i.postimg.cc/7Yc9mn8k/blank-profile-picture-973460-640.png",
+        first_name = "Anthony",
+        last_name = "roger",
+        addres = "570 memmer shores",
+        country = "united states",
+        city = "new york",
+        state = "Ny",
+        at_home = "yes",
+        where_work = null,
+        experience_years = 5,
+        specialty = "neurosurgeon",
+        raiting = 4,
+        date = "Sunday, May 15th At 15:00",
+        zip = 9563
+    } = appoiment;
 
-const AppoimentItem = () => {
 
     return (
         <Card containerStyle={styles.card}>
@@ -19,10 +34,10 @@ const AppoimentItem = () => {
                     }}
                 />
                 <View style={styles.cardInfoContent}>
-                    <Text style={styles.nameText}>dr ayon dash</Text>
-                    <Text style={styles.dateText}>sunday, may 15th at 15:00</Text>
-                    <Text style={styles.addresText}>570 memmer shores</Text>
-                    <Text style={styles.countryText}>{`san francisco, ca 90293`}</Text>
+                    <Text style={styles.nameText}>{first_name} {last_name}</Text>
+                    <Text style={styles.dateText}>{date}</Text>
+                    <Text style={styles.addresText}>{addres}</Text>
+                    <Text style={styles.countryText}>{`${city}, ${state} ${zip}`}</Text>
                 </View>
             </View>
             <View style={styles.appoimentMenu}>

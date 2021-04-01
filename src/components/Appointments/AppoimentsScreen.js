@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, FlatList } from 'react-native';
 import BackgroudHeaderV from '../../layout/BackgroundHeaderV';
 import AppoimentItem from './AppoimentItem';
 
@@ -11,7 +11,12 @@ const AppoimentScreen = () => {
                 <Text style={styles.titleText}>Appoiments</Text>
             </View>
             <View>
-                <AppoimentItem />
+                <FlatList
+                    data={[{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }]}
+                    renderItem={() =>
+                        <AppoimentItem />
+                    }
+                />
             </View>
         </View>
     );
