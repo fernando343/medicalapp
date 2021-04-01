@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native';
 import BackgroudHeaderV from '../../layout/BackgroundHeaderV';
+import AppoimentItem from './AppoimentItem';
 
 const AppoimentScreen = () => {
     return (
@@ -8,6 +9,9 @@ const AppoimentScreen = () => {
             <View style={styles.Header}>
                 <BackgroudHeaderV />
                 <Text style={styles.titleText}>Appoiments</Text>
+            </View>
+            <View>
+                <AppoimentItem />
             </View>
         </View>
     );
