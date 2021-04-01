@@ -6,9 +6,11 @@ import AppoimentScreen from './AppoimentsScreen';
 
 const Stack = createStackNavigator()
 
-const AppoimentsStack = () =>{
+const AppoimentsStack = () => {
     return (
-        <Stack.Navigator>
+        <Stack.Navigator
+            headerMode="none"
+        >
             <Stack.Screen name="Appoiments" component={AppoimentScreen} />
         </Stack.Navigator>
     );

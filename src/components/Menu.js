@@ -45,7 +45,7 @@ const Menu = () => {
                         ),
                     }} />
                 <Tabs.Screen
-                    name="Calendar"
+                    name="Appoiments"
                     component={AppoimentsStack}
                     options={{
                         tabBarIcon: ({ color, size }) => (

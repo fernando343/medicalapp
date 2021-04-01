@@ -8,7 +8,9 @@ const Stack = createStackNavigator()
 
 const FavoritesStack = () => {
     return (
-        <Stack.Navigator>
+        <Stack.Navigator
+            headerMode="none"
+        >
             <Stack.Screen name="Favorites" component={FavoriteScreen} />
         </Stack.Navigator>
     );

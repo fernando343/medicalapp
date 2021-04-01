@@ -4,7 +4,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 const W = Dimensions.get('window').width;
 
-const BackgroudHeader = ({Children}) => {
+const BackgroudHeaderV = ({Children}) => {
     return (
         <LinearGradient
             start={{ x: 0, y: 0 }}
@@ -49,4 +49,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default BackgroudHeader;
+export default BackgroudHeaderV;
