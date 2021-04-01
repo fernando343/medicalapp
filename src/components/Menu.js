@@ -6,6 +6,7 @@ import HomeStack from './Home/HomeStack';
 import SearchStack from './Search/SearchStack';
 import FavoritesStack from './Favorites/FavoritesStack';
 import AppoimentsStack from './Appointments/AppoimentsStack';
+import ProfileStack from './Profile/ProfileStack';
 
 const Tabs = createBottomTabNavigator();
 
@@ -17,6 +18,7 @@ const Menu = () => {
                 <Tabs.Screen name="Search" component={SearchStack} />
                 <Tabs.Screen name="Favorites" component={FavoritesStack} />
                 <Tabs.Screen name="Appoiments" component={AppoimentsStack} />
+                <Tabs.Screen name="Profile" component={ProfileStack} />
             </Tabs.Navigator>
         </NavigationContainer>
     );
