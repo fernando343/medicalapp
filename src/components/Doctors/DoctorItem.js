@@ -23,8 +23,7 @@ const DoctorItem = ({ doctor = {} }) => {
     } = doctor;
 
     return (
-        <Pressable onPress={() =>
-            navigate('Profile', { names: ['Brent', 'Satya', 'Michaś'] })
+        <Pressable onPress={() => console.log("go page")
           }>
             <Card key={id} containerStyle={styles.doctorCard}>
                 <View style={styles.contentCard}>

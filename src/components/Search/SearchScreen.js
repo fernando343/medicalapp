@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Text, View, StyleSheet, Dimensions, FlatList } from 'react-native';
 import { Searchbar } from 'react-native-paper';
+import { DoctorsContext } from '../../hooks/doctorContext';
 import BackgroudHeaderV from '../../layout/BackgroundHeaderV';
 import DoctorItem from '../Doctors/DoctorItem';
 
 const W = Dimensions.get('window').width;
 
 const SearchScreen = () => {
+    const doctorContext = useContext(DoctorsContext)
+    console.log(doctorContext);
     return (
         <View>
             <View style={styles.Header}>
@@ -18,7 +21,7 @@ const SearchScreen = () => {
             </View>
             <View>
                 <FlatList
-                    data={[{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }]}
+                    data={doctorContext.doctors}
                     renderItem={() =>
                         <DoctorItem />
                     }
