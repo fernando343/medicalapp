@@ -24,7 +24,7 @@ const DoctorItem = ({ doctor = {} }) => {
     } = doctor;
 
     return (
-        <Card key={first_name} containerStyle={styles.doctorCard}>
+        <Card key={id} containerStyle={styles.doctorCard}>
             <View style={styles.contentCard}>
                 <View style={styles.cardInfo}>
 
