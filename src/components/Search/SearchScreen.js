@@ -41,7 +41,7 @@ const SearchScreen = ({navigation}) => {
                                 <DoctorItem doctor={item} />
                             </Pressable>
                         }
-                        keyExtractor={(item) => item.id.toString()}
+                        keyExtractor={(item) => item.first_name}
                     />
                 </View>
             </View>

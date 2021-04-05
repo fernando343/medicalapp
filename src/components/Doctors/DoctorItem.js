@@ -2,6 +2,7 @@ import React from 'react'
 import { Pressable } from 'react-native';
 import { View, Text, StyleSheet } from 'react-native';
 import { AirbnbRating, Card, Avatar, Icon } from 'react-native-elements';
+import { Favorite } from '../Favorites/Favorite';
 
 const DoctorItem = ({ doctor = {} }) => {
 
@@ -23,7 +24,7 @@ const DoctorItem = ({ doctor = {} }) => {
     } = doctor;
 
     return (
-        <Card key={id.toString()} containerStyle={styles.doctorCard}>
+        <Card key={first_name} containerStyle={styles.doctorCard}>
             <View style={styles.contentCard}>
                 <View style={styles.cardInfo}>
 
@@ -60,12 +61,7 @@ const DoctorItem = ({ doctor = {} }) => {
                     </View>
                 </View>
                 <View>
-                    <Icon
-                        onPress={() => console.log('add favorite')}
-                        name='heart'
-                        color="rgba(204,48,137,0.5)"
-                        type='material-community'
-                        size={30} />
+                    <Favorite doctor={doctor} />
                 </View>
             </View>
         </Card>

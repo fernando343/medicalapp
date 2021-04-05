@@ -2,12 +2,16 @@ import React, { useContext } from 'react'
 import { Pressable, Text } from 'react-native';
 import { View, FlatList, StyleSheet } from 'react-native';
 import { DoctorsContext } from '../../hooks/doctorContext';
+import { FavoritesContext } from '../../hooks/favoritesContext';
 import BackgroudHeader from '../../layout/BackgroundHeader';
 import AppoimentItem from '../Appointments/AppoimentItem';
 import DoctorItem from '../Doctors/DoctorItem';
 
 const HomeScreen = ({ navigation }) => {
     const { isLoading, error, doctors } = useContext(DoctorsContext)
+
+    //console.log(favorites);
+
 
     return (
         <View>
