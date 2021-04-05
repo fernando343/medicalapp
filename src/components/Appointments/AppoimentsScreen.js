@@ -16,6 +16,7 @@ const AppoimentScreen = () => {
                     renderItem={() =>
                         <AppoimentItem />
                     }
+                    keyExtractor={(item) => item.id.toString()}
                 />
             </View>
         </View>

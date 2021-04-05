@@ -3,6 +3,7 @@ import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
 import SearchScreen from './SearchScreen';
 import DoctorDetail from '../Doctors/DoctorDetail';
+import { Text } from 'react-native';
 
 const Stack = createStackNavigator()
 

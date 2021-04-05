@@ -23,44 +23,52 @@ const DoctorItem = ({ doctor = {} }) => {
     } = doctor;
 
     return (
-        <Pressable onPress={() => console.log("go page")
-          }>
-            <Card key={id} containerStyle={styles.doctorCard}>
-                <View style={styles.contentCard}>
-                    <View style={styles.cardInfo}>
+        <Card key={id.toString()} containerStyle={styles.doctorCard}>
+            <View style={styles.contentCard}>
+                <View style={styles.cardInfo}>
+
+                    {picture ?
                         <Avatar
+                            size="medium"
+                            rounded
+                            source={{
+                                uri: picture
+                            }}
+                        />
+                        : <Avatar
                             size="medium"
                             rounded
                             source={{
                                 uri: 'https://i.postimg.cc/7Yc9mn8k/blank-profile-picture-973460-640.png'
                             }}
                         />
-                        <View style={styles.cardInfoText}>
-                            <Text style={styles.cityText}>wellness</Text>
-                            <Text style={styles.nameText}>{`dr ${first_name} ${last_name}`}</Text>
-                            <Text style={styles.specialistText}>demartologist</Text>
-                            <Text style={styles.countryText}>san francisco, ca | 5 min</Text>
-                            <View style={styles.raiting}>
-                                <AirbnbRating
-                                    size={20}
-                                    count={5}
-                                    defaultRating={2}
-                                    showRating={false}
-                                />
-                            </View>
+                    }
+
+                    <View style={styles.cardInfoText}>
+                        <Text style={styles.cityText}>{city}</Text>
+                        <Text style={styles.nameText}>{`dr ${first_name} ${last_name}`}</Text>
+                        <Text style={styles.specialistText}>{specialty}</Text>
+                        <Text style={styles.countryText}>{`${city}, ${state}`}</Text>
+                        <View style={styles.raiting}>
+                            <AirbnbRating
+                                size={20}
+                                count={5}
+                                defaultRating={raiting}
+                                showRating={false}
+                            />
                         </View>
                     </View>
-                    <View>
-                        <Icon
-                            onPress={() => console.log('add favorite')}
-                            name='heart'
-                            color="rgba(204,48,137,0.5)"
-                            type='material-community'
-                            size={30} />
-                    </View>
                 </View>
-            </Card>
-        </Pressable>
+                <View>
+                    <Icon
+                        onPress={() => console.log('add favorite')}
+                        name='heart'
+                        color="rgba(204,48,137,0.5)"
+                        type='material-community'
+                        size={30} />
+                </View>
+            </View>
+        </Card>
     );
 }
 
@@ -99,7 +107,8 @@ const styles = StyleSheet.create({
         color: "#A7A7A7"
     },
     raiting: {
-        marginLeft: -60
+        marginTop: 5,
+        marginLeft: -10
     }
 })
 
