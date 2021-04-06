@@ -9,7 +9,6 @@ import HomeStack from './Home/HomeStack';
 import SearchStack from './Search/SearchStack';
 import FavoritesStack from './Favorites/FavoritesStack';
 import AppoimentsStack from './Appointments/AppoimentsStack';
-import ProfileStack from './Profile/ProfileStack';
 
 const Tabs = createBottomTabNavigator();
 
@@ -52,14 +51,7 @@ const Menu = () => {
                             <MaterialCommunityIcons name="calendar" color={color} size={size} />
                         ),
                     }} />
-                <Tabs.Screen
-                    name="Profile"
-                    component={ProfileStack}
-                    options={{
-                        tabBarIcon: ({ color, size }) => (
-                            <MaterialCommunityIcons name="account" color={color} size={size} />
-                        ),
-                    }} />
+                
             </Tabs.Navigator>
         </NavigationContainer>
     );
