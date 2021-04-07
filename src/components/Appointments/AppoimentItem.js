@@ -14,9 +14,9 @@ const AppoimentItem = ({ appoiment = {} }) => {
         state = "Ny",
         year = 2021,
         mounth = 3,
-        day = 5,
-        hours = 23,
-        minutes = 0,
+        day = 6,
+        hours = 21,
+        minutes = 12,
         seconds = 0,
         zip = 9563
     } = appoiment;

@@ -8,10 +8,7 @@ import AppoimentItem from '../Appointments/AppoimentItem';
 import DoctorItem from '../Doctors/DoctorItem';
 
 const HomeScreen = ({ navigation }) => {
-    const { isLoading, error, doctors } = useContext(DoctorsContext)
-
-    //console.log(favorites);
-
+    const { doctors } = useContext(DoctorsContext)
 
     return (
         <View>
